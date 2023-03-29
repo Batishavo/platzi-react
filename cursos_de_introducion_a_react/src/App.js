@@ -1,10 +1,10 @@
 import React from "react";
-import {TodoCounter} from "./TodoCounter";
-import {TodoList} from "./TodoList";
-import { TodoSearch } from "./TodoSearch.js";
-import { TodoItem } from "./TodoItem.js";
-import { CreateTodoButtom } from "./TodoButtom";
-//import './App.css';
+import {TodoCounter} from "./components/TodoCounter";
+import {TodoList} from "./components/TodoList";
+import {TodoSearch} from "./components/TodoSearch.js";
+import {TodoItem} from "./components/TodoItem.js";
+import {CreateTodoButtom} from "./components/TodoButtom";
+import "./App.css";
 
 const todos = [
   {
@@ -24,25 +24,21 @@ const todos = [
 function App() {
   return (
     <React.Fragment>
-      <TodoCounter />    
-      
-      <TodoSearch />
-      
-      <TodoList>
-        {
-          todos.map(
-            todo =>(
-              <TodoItem 
-                key={todo.text} 
-                text={todo.text} 
-              />
-            )
-          )
-        }
-      </TodoList>
-      
-      <CreateTodoButtom />      
-   
+      <div className="contenedor">
+        <div className="principal">
+          <TodoCounter />
+          <TodoSearch />
+
+          <TodoList>
+            {todos.map(todo => (
+              <TodoItem key={todo.text} text={todo.text} />
+            ))}
+          </TodoList>
+          <div className="boton">
+            <CreateTodoButtom  />
+          </div>
+        </div>
+      </div>
     </React.Fragment>
   );
 }

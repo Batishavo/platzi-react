@@ -1,0 +1,38 @@
+.todoItem {
+  text-align: center;
+  width: 90%;
+  list-style: none;
+  background-color: var(--principal);
+  color: var(--white);
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 5px solid var(--white);
+}
+
+.todoItem span {
+  display: inline-block;
+}
+.todoItem p {
+  display: inline-block;
+}
+
+.buton {
+  width: 20px;
+  height: 20px;
+  font-weight: bold;
+  border-radius: 50%;
+  border: 1px solid var(--white);
+  margin-top: 20px;
+}
+
+.xButom {
+  background-color: red;
+  float: right;
+  margin-right: 10px;
+}
+
+.✓Buttom {
+    background-color: green;
+    float: left;
+    margin-left: 10px;
+}

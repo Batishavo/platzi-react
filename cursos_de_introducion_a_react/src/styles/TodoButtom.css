@@ -1,0 +1,20 @@
+
+.mainButon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  float: right;
+  bottom: 0;
+  border: none;
+  margin-right: 10px;
+  background-color: var(--second);
+  color: white;
+  font-size: 30px;
+}
+
+.mainButon:hover {
+  width: 60px;
+  height: 60px;
+  background-color: var(--principal);
+  transform: rotate(200deg);
+}
