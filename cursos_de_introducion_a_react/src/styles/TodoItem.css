@@ -9,6 +9,16 @@
   border: 5px solid var(--white);
 }
 
+.todoItem--completed {
+  background-color: #7c7c7c;
+}
+.todoItem--completed p {
+  text-decoration: line-through;
+}
+.todoItem--completed span {
+  background-color: #7c7c7c;
+}
+
 .todoItem span {
   display: inline-block;
 }
@@ -32,7 +42,7 @@
 }
 
 .✓Buttom {
-    background-color: green;
-    float: left;
-    margin-left: 10px;
+  background-color: green;
+  float: left;
+  margin-left: 10px;
 }

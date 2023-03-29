@@ -19,6 +19,10 @@ const todos = [
     text: "Cortarme el cabello",
     completed: false,
   },
+  {
+    text: "Aprender react",
+    completed: true,
+  }
 ];
 
 function App() {
@@ -31,7 +35,9 @@ function App() {
 
           <TodoList>
             {todos.map(todo => (
-              <TodoItem key={todo.text} text={todo.text} />
+              <TodoItem key={todo.text} 
+                text={todo.text} 
+                completed={todo.completed}/>
             ))}
           </TodoList>
           <div className="boton">
