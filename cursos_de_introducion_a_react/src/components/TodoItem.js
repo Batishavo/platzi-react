@@ -1,28 +1,29 @@
-import react from "react";
+import React from "react";
 import "../styles/TodoItem.css"
 
 function TodoItem(props){
 
     const onComplete = ()=>{
         alert('Ya completaste el todo '+props.text);
+        props.onComplete();
     }
 
     const onDelete = ()=>{
         alert('Borraste el todo '+props.text);
-        console.log(props.completed && "todoItem--completed");
+        //console.log(completed && "todoItem--completed");
     }
 
     return(
         <li className={`todoItem ${props.completed && 'todoItem--completed'}`}>
             <span 
                 className="buton ✓Buttom"
-                onClick={()=>onComplete()}>
+                onClick={props.onComplete}>
                     ✓
             </span>
             <p>{props.text}</p>
             <span 
                 className="buton xButom"
-                onClick={()=>onDelete()}
+                onClick={props.onDelete}
                 >
                     X
             </span>
