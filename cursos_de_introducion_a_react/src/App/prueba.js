@@ -34,7 +34,6 @@ function useLocalStorage(itemName, initialValue) {
 }
 
 function App() {
-  const [patito, savePatito] = useLocalStorage('PATITO_V1', 'FERNANDO');
   const [todos, saveTodos] = useLocalStorage('TODOS_V1', []);
   const [searchValue, setSearchValue] = React.useState('');
 
@@ -68,7 +67,6 @@ function App() {
   };
   
   return [
-    <p>{patito}</p>,
     <AppUI
       totalTodos={totalTodos}
       completedTodos={completedTodos}
